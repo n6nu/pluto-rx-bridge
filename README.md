@@ -28,16 +28,28 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v0.99.6
+## Latest release — v0.99.6 (bridge-core CatServer fixes)
 
 | Variant | Download |
 |---|---|
 | **Windows 10 / 11** (installer) | **[pluto-rx-bridge-0.99.6-setup.exe](pluto-rx-bridge-0.99.6-setup.exe)** |
 
-First public release. Bench-tested against a signal generator on
-144.400 MHz; PPM-trim + the Pluto+'s 0.5 ppm VCTCXO yield spot-on
-frequency accuracy. Soaking and on-air hours pending — version line
-stays at v0.99.x until promotion to v1.0.
+Picks up three CatServer fixes from this week's pluto-wsjtx-bridge
+bring-up. **Only meaningful if you have the rigctld CAT server
+opted in** (Settings → CAT server checkbox, or `--cat` CLI flag)
+for WSJT-X Doppler tracking. Default CAT-off, UDP-observer mode is
+unchanged.
+
+- `ptt_type=0x1` in dump_state (was `0x8` `RIG_PTT_GPION`).
+- `has_set_ptt=1` / `has_get_ptt=1` / `has_set_mode=1` /
+  `has_get_mode=1` advertised in dump_state.
+- PTT value parser accepts any non-zero value (`1`/`2`/`3`) as ON,
+  not just `1` — needed for WSJT-X PKTUSB / PKTLSB modes which
+  send Hamlib PTT value `3` (DATA-PTT).
+
+If you've been hitting "Test PTT clicked but the bridge logged
+[CAT PTT] off" against v0.99.5 in WSJT-X data modes, that was the
+bug. Drop-in upgrade. INI compatible.
 
 What's in the box (cumulative across the v0.99.x line):
 
