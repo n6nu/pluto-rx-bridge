@@ -1,5 +1,34 @@
 # Pluto RX Bridge — Release Notes
 
+## v1.0.0 — stable (2026-05-04)
+
+Promoted out of beta. RX-only Pluto / Pluto+ observer for QMAP
+wideband Q65 + WSJT-X RX audio is verified end-to-end on 2 m and
+70 cm, against signal-generator carriers and on-air signals on a
+GPSDO-locked Pluto+ over Ethernet. The 0.99.x line ends here.
+
+Cumulative since v0.99.0 first build:
+
+- **libiio v0.26 bundle** (no separate ADI SDK install).
+- **AD9361/AD9363 RX path** with all four gain modes (manual,
+  fast/slow attack, hybrid), configurable sample rate
+  (2.083–61.44 Msps), RF bandwidth (200 kHz–56 MHz), PPM trim.
+- **Auto-reconnect** on Pluto reboot / cable bump / network glitch
+  — cold-start AND mid-stream. Worker bootstraps via the same
+  retry loop even when the device is unreachable at launch.
+- **Opt-in rigctld-compatible CAT server** (TCP 4534, default OFF)
+  for WSJT-X Doppler tracking. Auto-detect UDP mute when a CAT
+  client is actually connected.
+- **Live source indicator in window title** (`— UDP` /
+  `— UDP (CAT idle)` / `— CAT (n)`), updated every second.
+- **Cross-INI seed** from `pluto-wsjtx-bridge` on first launch +
+  **Discover button** (libiio scan over `ip,usb` backends) for
+  zero-config setup.
+- **bridge-core CatServer fixes** for WSJT-X PTT method = CAT in
+  data modes (PKTUSB / PKTLSB).
+
+INI compatible with v0.99.6 — drop-in upgrade.
+
 ## v0.99.6 — bridge-core CatServer fixes (2026-05-04)
 
 Picks up three CatServer fixes from this week's
