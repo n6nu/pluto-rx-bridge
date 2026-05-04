@@ -1,5 +1,26 @@
 # Pluto RX Bridge — Release Notes
 
+## v0.99.6 — bridge-core CatServer fixes (2026-05-04)
+
+Picks up three CatServer fixes from this week's
+`pluto-wsjtx-bridge` bring-up. **Only meaningful if you have
+the rigctld CAT server enabled** (Settings → CAT server checkbox,
+or `--cat` CLI flag) for WSJT-X Doppler tracking. The default
+CAT-off, UDP-observer mode is unchanged.
+
+- `ptt_type=0x1` in `\dump_state` (was `0x8` `RIG_PTT_GPION`).
+  WSJT-X used to show "PTT device: GPIO" and refuse to send
+  `\set_ptt`; now it correctly sees the bridge as `RIG_PTT_RIG`.
+- `has_set_ptt=1` + `has_get_ptt=1` + `has_set_mode=1` +
+  `has_get_mode=1` added to `dump_state`. WSJT-X 2.6+ checks
+  these capability flags before issuing the matching commands.
+- PTT value parser accepts any non-zero value as ON. Was matching
+  only literal `"1"`. WSJT-X in PKTUSB / PKTLSB sends value `3`
+  (Hamlib `PTT_DATA`) which silently fell through to OFF.
+
+Drop-in upgrade from v0.99.5. INI compatible. No app-level code
+changed.
+
 ## v0.99.5 — visible CAT/UDP mode + auto-detect (2026-05-03)
 
 UX fixes on top of v0.99.4:

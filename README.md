@@ -28,11 +28,11 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v0.99.5
+## Latest release — v0.99.6
 
 | Variant | Download |
 |---|---|
-| **Windows 10 / 11** (installer) | **[pluto-rx-bridge-0.99.5-setup.exe](pluto-rx-bridge-0.99.5-setup.exe)** |
+| **Windows 10 / 11** (installer) | **[pluto-rx-bridge-0.99.6-setup.exe](pluto-rx-bridge-0.99.6-setup.exe)** |
 
 First public release. Bench-tested against a signal generator on
 144.400 MHz; PPM-trim + the Pluto+'s 0.5 ppm VCTCXO yield spot-on
