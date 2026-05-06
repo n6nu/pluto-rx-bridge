@@ -28,7 +28,18 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v1.1.1
+## Latest release — v1.1.2
+
+Download: **[pluto-rx-bridge-1.1.2-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.2-setup.exe)**
+
+What's new in v1.1.2 (2026-05-05) -- DC blocker for zero-IF
+receivers. New "DC blocker (zero-IF spike removal)" checkbox in
+Settings (default ON) chews through the LO-leakage spike at the
+centre of the on-screen waterfall and the QMAP wideband display.
+100 Hz notch, irrelevant for Q65 / FT8 audio. Drop-in upgrade.
+
+---
+### Previous release — v1.1.1
 
 Download: **[pluto-rx-bridge-1.1.1-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.1-setup.exe)**
 
@@ -37,8 +48,6 @@ capability gating in the Settings combo. RF-side bridges (this one
 included) offer the same 96 / 128 / 192 / 256 kHz options as before;
 the sound-card-IQ bridge (iq-rx-bridge) now hides rates above the
 sound card's actual rate. Drop-in upgrade.
-
----
 ### Previous release — v1.1.0
 
 Download: **[pluto-rx-bridge-1.1.0-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.0-setup.exe)**
