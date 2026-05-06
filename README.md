@@ -28,7 +28,18 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v1.1.0
+## Latest release — v1.1.1
+
+Download: **[pluto-rx-bridge-1.1.1-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.1-setup.exe)**
+
+What's new in v1.1.1 (2026-05-05) -- internal: per-device IQ-rate
+capability gating in the Settings combo. RF-side bridges (this one
+included) offer the same 96 / 128 / 192 / 256 kHz options as before;
+the sound-card-IQ bridge (iq-rx-bridge) now hides rates above the
+sound card's actual rate. Drop-in upgrade.
+
+---
+### Previous release — v1.1.0
 
 Download: **[pluto-rx-bridge-1.1.0-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.0-setup.exe)**
 
@@ -38,8 +49,6 @@ fixed-size 400x640. Settings moved from a button to a top-level
 State grid. Settings dialog reflowed side-by-side, with a new
 **Linrad IQ rate** combo (defaults to "96 kHz (QMAP Default)").
 Drop-in upgrade; 96 kHz wire format unchanged.
-
----
 ### Previous release — v0.99.6 (bridge-core CatServer fixes)
 
 | Variant | Download |
