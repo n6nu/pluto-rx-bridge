@@ -28,7 +28,19 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v0.99.6 (bridge-core CatServer fixes)
+## Latest release — v1.1.0
+
+Download: **[pluto-rx-bridge-1.1.0-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.0-setup.exe)**
+
+What's new in v1.1.0 (2026-05-05) -- UI refresh. Main window now
+fixed-size 400x640. Settings moved from a button to a top-level
+**Settings** menu (`Ctrl+,`). New **Linrad rate** readout in the
+State grid. Settings dialog reflowed side-by-side, with a new
+**Linrad IQ rate** combo (defaults to "96 kHz (QMAP Default)").
+Drop-in upgrade; 96 kHz wire format unchanged.
+
+---
+### Previous release — v0.99.6 (bridge-core CatServer fixes)
 
 | Variant | Download |
 |---|---|
@@ -73,8 +85,6 @@ What's in the box (cumulative across the v0.99.x line):
   command the bridge directly. Auto-detect UDP mute when a CAT
   client is actually connected; live source indicator in the
   window title (`— UDP` / `— UDP (CAT idle)` / `— CAT (n)`).
-
----
 
 ## Bundled third-party libraries
 

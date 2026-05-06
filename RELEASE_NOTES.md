@@ -1,5 +1,32 @@
 # Pluto RX Bridge — Release Notes
 
+## v1.1.0 — UI refresh: fixed window, Settings menu, Linrad rate readout (2026-05-05)
+
+User-visible polish across the bridge UI; no behavioural changes on
+the wire (96 kHz IQ format unchanged).
+
+- **Fixed-size 400x640 main window**. Replaces the freely-resizable
+  640x540 minimum. Window opens identically every session and
+  doesn't drift; conditional banners (manual-freq override,
+  transverter IF readout) word-wrap rather than clip.
+- **Settings is a top-level menu** in the menu bar (shortcut
+  `Ctrl+,`) -- was a button at the bottom of the State group. Frees
+  ~40 px of vertical real estate for the waterfall.
+- **Linrad rate readout** in the State grid, between the device row
+  and RX status. Reads the active LinradServer output rate; matches
+  what's persisted in the INI.
+- **Settings dialog reflow**: radio gain panel and bridge-wide
+  group sit horizontally side-by-side. Was vertical, ran past the
+  bottom of 1080p laptops with the deeper panels.
+- **New "Linrad IQ rate" combo** in the Settings dialog. Defaults
+  to "96 kHz (QMAP Default)" -- same wire format as before; matches
+  every shipped QMAP release.
+- UDP data port (`50004`) and Linrad host (`127.0.0.1`) /
+  TCP port (`49812`) editors gained tooltips explaining their use
+  in multi-instance setups.
+
+INI compatible with v1.0.x. Drop-in upgrade.
+
 ## v1.0.0 — stable (2026-05-04)
 
 Promoted out of beta. RX-only Pluto / Pluto+ observer for QMAP
