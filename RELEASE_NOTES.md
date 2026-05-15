@@ -2,6 +2,31 @@
 
 
 
+
+## v1.1.7 -- TCP listen failure non-fatal (Win11 Hyper-V port-exclusion drop-in fix) (2026-05-15)
+
+Drop-in fix for a silent-failure bug discovered with W3SZ (Roger)
+on the SDRplay bridge (shipped there as v1.1.21). Same underlying
+shared-code bug affected every bridge in the family, so this
+release ports the fix to the other six.
+
+The Linrad parameter-server TCP listen on port 49812 fails with
+WSAEACCES ("address is protected") on Win11 boxes where Hyper-V,
+WSL2, or Docker Desktop has reserved the upper ephemeral port range
+49152-65535. The previous code aborted LinradServer::start() on
+that failure, so the UDP socket was never created and QMAP saw no
+packets. QMAP doesn't actually use the Linrad TCP handshake -- only
+UDP -- so this release logs the failure (with a hint to check
+`netsh int ipv4 show excludedportrange protocol=tcp`) and continues
+in UDP-only mode.
+
+All three sockets (Linrad TCP, CAT TCP, outgoing UDP source) also
+now bind to AnyIPv4 (0.0.0.0) explicitly rather than relying on Qt's
+dual-stack Any, which can silently pick IPv6-only on some Windows
+configs.
+
+No RF / decode / wire-format changes. Drop-in upgrade.
+
 ## v1.1.5 -- Help-menu polish + LGPL compliance + bundled user guide (2026-05-08)
 
 Quality release on top of v1.1.4. No functional changes to the

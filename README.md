@@ -28,7 +28,21 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release — v1.1.5
+## Latest release -- v1.1.7
+
+Download: **[pluto-rx-bridge-1.1.7-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.7-setup.exe)**
+
+What's new in v1.1.7 (2026-05-15) -- Drop-in fix for a silent-failure
+bug on Win11 boxes where Hyper-V / WSL2 reserves the upper ephemeral
+TCP port range. The bridge's Linrad TCP listen on port 49812 failed
+with WSAEACCES and the previous code aborted before creating the UDP
+socket, so QMAP saw no packets. This release makes TCP listen failure
+non-fatal -- bridge continues in UDP-only mode (which is all QMAP
+needs anyway). All three sockets also now bind AnyIPv4 explicitly to
+avoid Qt's dual-stack ambiguity. No RF / decode changes.
+
+---
+### Previous release — v1.1.5
 
 Download: **[pluto-rx-bridge-1.1.5-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.5-setup.exe)**
 
