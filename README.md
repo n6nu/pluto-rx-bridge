@@ -1,18 +1,19 @@
 # Pluto RX Bridge — Beta Releases
 
 Windows installer downloads for the **Pluto RX Bridge** — a Qt6 C++
-application that adds wideband Q65 (QMAP) reception via an
-**ADALM-Pluto** or **Pluto+** to a station already running a real
-radio (IC-905, IC-705, FT-991A, etc.) for TX. Sibling to the HackRF,
-RTL-SDR, SDRplay, AirSpy, and IQ RX bridges in the family — same
-GUI, same WSJT-X UDP / Linrad / VB-Cable wiring, just with the
-AD9361/AD9363 transceiver as the front end.
+application that adds wideband Q65 reception for **WS-MAP** /
+**EME65** via an **ADALM-Pluto** or **Pluto+** to a station already
+running a real radio (IC-905, IC-705, FT-991A, etc.) for TX. Sibling
+to the HackRF, RTL-SDR, SDRplay, AirSpy, and IQ RX bridges in the
+family — same GUI, same WS UDP / Linrad / VB-Cable wiring, just with
+the AD9361/AD9363 transceiver as the front end.
 
 The bridge talks to the Pluto over **libiio** (network backend by
-default — `ip:HOST` over USB-RNDIS or Ethernet), tunes the AD9361
-to match WSJT-X's dial frequency, demodulates SSB to **VB-Cable
-Line 1** for WSJT-X RX audio, and streams **96 kHz IQ to QMAP** for
-wideband Q65 decode. Your real rig keeps doing TX and narrowband RX.
+default — `ip:HOST` over USB-RNDIS or Ethernet), tunes the AD9361 to
+match WS's dial frequency, demodulates SSB to **VB-Cable Line 1**
+for WS RX audio, and streams **wideband IQ to WS-MAP** (96 kHz by
+default, selectable up to 256 kHz) for wideband Q65 decode. Your
+real rig keeps doing TX and narrowband RX.
 
 For **Doppler tracking** with WSJT-X, the bridge can optionally run
 a **rigctld-compatible CAT server** so WSJT-X (Rig = "Hamlib NET
@@ -23,6 +24,11 @@ release notes below.
 > separate **TX+RX** Pluto bridge — `pluto-wsjtx-bridge` — is on the
 > roadmap and will live in its own repo. The `pluto-wsjtx-bridge`
 > name is reserved for the full transceiver work.
+
+The WS suite — **WS**, **WS-MAP** and **EME65** — lives at
+<https://wsjt-x-improved.sourceforge.io>, which is where most of this work went.
+
+<sub>Also works with WSJT-X, QMAP and MAP65.</sub>
 
 Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
