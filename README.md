@@ -28,9 +28,24 @@ Author: **Andreas Junge, N6NU** &lt;<n6nu@arrl.net>&gt;.
 
 ---
 
-## Latest release -- v1.1.7
+## Current build
 
-Download: **[pluto-rx-bridge-1.1.7-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.7-setup.exe)**
+The newest published release is **v2.1.1**:
+**[pluto-rx-bridge-2.1.1-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/download/v2.1.1/pluto-rx-bridge-2.1.1-setup.exe)**
+
+One thing to know before you install it: every installer up to and including v2.1.1 was packaged without the
+Microsoft Visual C++ runtime, so on a clean Windows machine it starts and
+closes again immediately. Installing the Microsoft Visual C++
+Redistributable cures that.
+
+A V3 build with the runtime bundled is close to release. Ask if you
+would like the current one in the meantime.
+
+---
+
+## Release v1.1.7
+
+Download: **[pluto-rx-bridge-1.1.7-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/download/v1.1.7/pluto-rx-bridge-1.1.7-setup.exe)**
 
 What's new in v1.1.7 (2026-05-15) -- Drop-in fix for a silent-failure
 bug on Win11 boxes where Hyper-V / WSL2 reserves the upper ephemeral
@@ -44,7 +59,7 @@ avoid Qt's dual-stack ambiguity. No RF / decode changes.
 ---
 ### Previous release — v1.1.5
 
-Download: **[pluto-rx-bridge-1.1.5-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.5-setup.exe)**
+Download: **[pluto-rx-bridge-1.1.5-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/download/v1.1.5/pluto-rx-bridge-1.1.5-setup.exe)**
 
 What's new in v1.1.5 (2026-05-08) -- Quality release. New Help menu
 with User Guide (F1) opening the bundled beta-tester PDF, and
@@ -56,7 +71,7 @@ section. No RF / decode / wire-format changes. Drop-in upgrade.
 ---
 ### Previous release — v1.1.4
 
-Download: **[pluto-rx-bridge-1.1.4-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.4-setup.exe)**
+Download: **[pluto-rx-bridge-1.1.4-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/download/v1.1.4/pluto-rx-bridge-1.1.4-setup.exe)**
 
 What's new in v1.1.4 (2026-05-07) -- DC blocker on RF-direct receivers
 is now user-enableable from Settings. Default state unchanged (OFF
@@ -67,7 +82,7 @@ upgrade.
 ---
 ### Previous release — v1.1.3
 
-Download: **[pluto-rx-bridge-1.1.3-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.3-setup.exe)**
+Download: **[pluto-rx-bridge-1.1.3-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/download/v1.1.3/pluto-rx-bridge-1.1.3-setup.exe)**
 
 What's new in v1.1.3 (2026-05-06) -- DC blocker default-off for
 RF-direct receivers (HackRF / RTL-SDR / SDRplay / Pluto / AirSpy)
@@ -78,7 +93,7 @@ checkbox is grayed out for those radios. Sound-card-IQ sources
 ---
 ### Previous release — v1.1.2
 
-Download: **[pluto-rx-bridge-1.1.2-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.2-setup.exe)**
+Download: **[pluto-rx-bridge-1.1.2-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/download/v1.1.2/pluto-rx-bridge-1.1.2-setup.exe)**
 
 What's new in v1.1.2 (2026-05-05) -- DC blocker for zero-IF
 receivers. New "DC blocker (zero-IF spike removal)" checkbox in
@@ -87,7 +102,7 @@ centre of the on-screen waterfall and the QMAP wideband display.
 100 Hz notch, irrelevant for Q65 / FT8 audio. Drop-in upgrade.
 ### Previous release — v1.1.1
 
-Download: **[pluto-rx-bridge-1.1.1-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.1-setup.exe)**
+Download: **[pluto-rx-bridge-1.1.1-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/download/v1.1.1/pluto-rx-bridge-1.1.1-setup.exe)**
 
 What's new in v1.1.1 (2026-05-05) -- internal: per-device IQ-rate
 capability gating in the Settings combo. RF-side bridges (this one
@@ -96,7 +111,7 @@ the sound-card-IQ bridge (iq-rx-bridge) now hides rates above the
 sound card's actual rate. Drop-in upgrade.
 ### Previous release — v1.1.0
 
-Download: **[pluto-rx-bridge-1.1.0-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/latest/download/pluto-rx-bridge-1.1.0-setup.exe)**
+Download: **[pluto-rx-bridge-1.1.0-setup.exe](https://github.com/n6nu/pluto-rx-bridge/releases/download/v1.1.0/pluto-rx-bridge-1.1.0-setup.exe)**
 
 What's new in v1.1.0 (2026-05-05) -- UI refresh. Main window now
 fixed-size 400x640. Settings moved from a button to a top-level
